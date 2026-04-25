@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Café Sur | Cafetería de Especialidad · Sabores Peruanos e Internacionales</title>
+
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Vinculación al archivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <div class="container header-inner">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="IMAGENES/logo_cafesur.jpg" alt="Logo Café Sur" class="logo-img">
+                <div class="logo-text">
+                    CAFÉ SUR
+                    <span>Especialidad Peruana</span>
+                </div>
+            </div>
+
+            <!-- Menú de navegación -->
+            <nav class="nav-links">
+                <a href="#">Inicio</a>
+                <a href="#quienes">Quiénes Somos</a>
+                <a href="#horarios">Horarios</a>
+                <a href="#">Carta</a>
+                <a href="reservas.html" target="_blank" class="nav-btn-reservar">Reservas</a>
+                <a href="#">Contacto</a>
+            </nav>
+
+            <!-- Botón menú móvil -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CAFÉ SUR</h1>
+            <p class="subtitle">Descubre nuestros sabores <span class="txt-rotate" data-period="2000" data-rotate='[ "peruanos.", "internacionales.", "ancestrales.", "únicos." ]'></span></p>
+            <a href="reservas.html" target="_blank" class="btn-reservar">
+                <i class="far fa-calendar-alt"></i> Reservar Mesa
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN: QUIÉNES SOMOS ==================== -->
+    <section id="quienes" class="section">
+        <div class="container">
+
+
+            <!-- Título de sección -->
+            <h2 class="section-title">QUIÉNES SOMOS</h2>
+
+            <!-- Contenido: texto + imágenes -->
+            <div class="about-grid">
+
+                <!-- Columna de texto -->
+                <div class="about-text">
+                    <p>
+                        En <strong>Café Sur</strong> nos dedicamos a la excelencia en cada taza. Seleccionamos rigurosamente granos de especialidad de las mejores fincas peruanas, garantizando un perfil de tueste y sabor inigualable. Más que una cafetería, somos un refugio cultural; nuestra librería integrada crea el entorno perfecto para la lectura y el enfoque.
+                    </p>
+                    <p>
+                        Diseñamos experiencias gastronómicas con altos estándares de calidad. Desde nuestra bollería artesanal horneada cada mañana, hasta nuestras exclusivas sesiones de <strong>Tea Time</strong> y nuestro elegante <strong>Wine Time</strong> de autor. En Café Sur, la tradición, el respeto por el origen y la pasión por el detalle se sirven en cada mesa.
+                    </p>
+                </div>
+
+                <!-- Columna de Video Principal -->
+                <div class="about-video-single">
+                    <video autoplay loop muted playsinline class="video-main-intro">
+                        <source src="VIDEOS/intro.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN: GALERÍA ==================== -->
+    <section id="galeria" class="section">
+        <div class="container">
+            <h2 class="section-title">NUESTROS ESPACIOS</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="IMAGENES/imagen 02.jpg" alt="Espacio Café Sur 1"></div>
+                <div class="gallery-item"><img src="IMAGENES/imagen 03.jpg" alt="Espacio Café Sur 2"></div>
+                <div class="gallery-item"><img src="IMAGENES/imagen 04.jpg" alt="Espacio Café Sur 3"></div>
+                <div class="gallery-item"><img src="IMAGENES/imagen 05.jpg" alt="Espacio Café Sur 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN: HORARIOS ==================== -->
+    <section id="horarios" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">NUESTROS HORARIOS</h2>
+            <div class="horarios-modern">
+                <div class="horarios-info">
+                    <span class="subtitle-decorative">Tu pausa diaria</span>
+                    <h3>El momento perfecto <br>te espera.</h3>
+                    <p>Desde el primer rayo de sol con nuestro espresso de especialidad, hasta el anochecer con un exclusivo Wine Time. Café Sur está abierto para transformar tu rutina en una experiencia inolvidable.</p>
+                    <div class="fin-semana-modern">
+                        <i class="fas fa-glass-cheers"></i>
+                        <span>Reservas especiales disponibles para Tea Time & Wine Time.</span>
+                    </div>
+                </div>
+                <div class="horarios-list">
+                    <div class="horario-row">
+                        <span class="day">Atención todos los días</span>
+                        <span class="time">8:00 AM — 10:00 PM</span>
+                    </div>
+                    <div class="horario-footer-note">
+                        <i class="fas fa-map-marker-alt"></i> Av. Pardo y Aliaga 683, San Isidro
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Columna 1: Marca -->
+                <div class="footer-brand">
+                    <h2 class="footer-logo">
+                        CAFÉ SUR
+                    </h2>
+                    <p class="footer-description">
+                        Especialidad Peruana. Un refugio donde el buen café, la literatura y los detalles se encuentran.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Ubicación y Contacto -->
+                <div class="footer-info">
+                    <h3>Visítanos</h3>
+                    <p><i class="fas fa-map-pin"></i> Av. Pardo y Aliaga 683, San Isidro</p>
+                    <p><i class="fab fa-whatsapp"></i> +51 904 322 426</p>
+                    <p><i class="far fa-envelope"></i> hola@cafesur.pe</p>
+                </div>
+
+                <!-- Columna 3: Horarios -->
+                <div class="footer-info">
+                    <h3>Horarios</h3>
+                    <p>Lunes a Viernes: 08:00 - 22:00</p>
+                    <p>Sábados: 09:00 - 22:00</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Café Sur. Todos los derechos reservados.
+                </p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Vinculación al archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+
+</html>

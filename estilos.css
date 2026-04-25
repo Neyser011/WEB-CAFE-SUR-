@@ -1,0 +1,965 @@
+/* =============================================
+   RESET Y CONFIGURACIÓN GENERAL
+   ============================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FDFBF7;
+    font-family: 'Raleway', sans-serif;
+    color: #3B2F2F;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+/* =============================================
+   HEADER
+   ============================================= */
+header {
+    background: #FFFFFF;
+    padding: 1rem 0;
+    border-bottom: 1px solid #EADDCA;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #A67B5B;
+    box-shadow: 0 0 10px rgba(166, 123, 91, 0.2);
+}
+
+.logo-text {
+    font-size: 2.2rem;
+    letter-spacing: 5px;
+    color: #3B2F2F;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.logo-text span {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: #A67B5B;
+    text-transform: none;
+}
+
+/* Navegación */
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+}
+
+.nav-links a {
+    color: #3B2F2F;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    transition: 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #A67B5B;
+    transition: width 0.4s;
+}
+
+.nav-links a:hover {
+    color: #A67B5B;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Botón menú móvil */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #3B2F2F;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+/* =============================================
+   HERO SECTION
+   ============================================= */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(30, 20, 10, 0.8)), url('IMAGENES/imagen 01.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeUp 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #FDFBF7;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+    font-size: 1.8rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #FDFBF7;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.txt-rotate > .wrap {
+    border-right: 0.08em solid #A67B5B;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { border-right-color: #A67B5B; }
+    50% { border-right-color: transparent; }
+    100% { border-right-color: #A67B5B; }
+}
+
+/* Botón */
+.btn-reservar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    border: 1.5px solid #FDFBF7;
+    color: #FDFBF7;
+    padding: 0.9rem 3rem;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.btn-reservar:hover {
+    background: #FDFBF7;
+    color: #3B2F2F;
+    border-color: #FDFBF7;
+    box-shadow: 0 0 20px rgba(253, 251, 247, 0.6);
+}
+
+
+/* =============================================
+   SECCIONES GENERALES
+   ============================================= */
+.section {
+    padding: 5rem 0;
+}
+
+.section-light {
+    background-color: #FFFFFF;
+}
+
+.section-title {
+    font-size: 2.9rem;
+    text-align: center;
+    color: #3B2F2F;
+    margin-bottom: 2.8rem;
+    letter-spacing: 4px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 2px;
+    background: #A67B5B;
+    margin: 1rem auto 0;
+    opacity: 0.8;
+}
+
+
+/* =============================================
+   SECCIÓN: QUIÉNES SOMOS
+   ============================================= */
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1 1 450px;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #2A2121;
+    padding-right: 2rem;
+}
+
+.about-text p {
+    margin-bottom: 1.8rem;
+}
+
+.about-text p:first-of-type {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: #A67B5B;
+    font-style: italic;
+    border-left: 3px solid #EADDCA;
+    padding-left: 1.5rem;
+}
+
+.about-text strong {
+    color: #3B2F2F;
+    font-weight: 700;
+}
+
+.about-video-single {
+    flex: 1 1 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-video-single::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: #EADDCA;
+    border-radius: 24px;
+    z-index: 0;
+}
+
+.video-main-intro {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* =============================================
+   SECCIÓN: GALERÍA
+   ============================================= */
+#galeria {
+    background: linear-gradient(rgba(59, 47, 47, 0.85), rgba(59, 47, 47, 0.85)), url('IMAGENES/imagen 06.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 6rem 0;
+}
+
+#galeria .section-title {
+    color: #FDFBF7;
+    margin-bottom: 3.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: none;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.9);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03);
+    filter: brightness(1);
+}
+
+
+/* =============================================
+   SECCIÓN: HORARIOS
+   ============================================= */
+.horarios-modern {
+    display: flex;
+    flex-wrap: wrap;
+    background: #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 auto;
+    border: none;
+}
+
+.horarios-info {
+    flex: 1 1 500px;
+    padding: 5rem 4rem;
+    background: linear-gradient(rgba(253, 251, 247, 0.92), rgba(253, 251, 247, 0.95)), url('IMAGENES/imagen 04.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-right: 1px solid #EADDCA;
+}
+
+.subtitle-decorative {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #A67B5B;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.horarios-info h3 {
+    font-size: 3.2rem;
+    color: #3B2F2F;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.horarios-info p {
+    color: #5C4A4A;
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.fin-semana-modern {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    background: #FFFFFF;
+    border-left: 4px solid #A67B5B;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+}
+
+.fin-semana-modern i {
+    font-size: 1.8rem;
+    color: #A67B5B;
+}
+
+.fin-semana-modern span {
+    color: #3B2F2F;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.horarios-list {
+    flex: 1 1 350px;
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #EADDCA;
+    color: #3B2F2F;
+    position: relative;
+}
+
+.horario-row {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(59, 47, 47, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.horario-row:last-child {
+    border-bottom: none;
+}
+
+.horario-row .day {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #A67B5B;
+}
+
+.horario-row .time {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    color: #3B2F2F;
+}
+
+.horario-footer-note {
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: #5C4A4A;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.horario-footer-note i {
+    font-size: 1.2rem;
+}
+
+/* =============================================
+   PÁGINA DE RESERVAS DETALLADA
+   ============================================= */
+body.reservas-page {
+    background-color: #FDFBF7;
+}
+
+.reservas-hero {
+    padding: 8rem 0 5rem 0;
+    min-height: 100vh;
+}
+
+.reservas-split {
+    display: flex;
+    flex-wrap: wrap;
+    background: #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid #EADDCA;
+}
+
+.reservas-info-panel {
+    flex: 1 1 450px;
+    background: linear-gradient(rgba(59, 47, 47, 0.75), rgba(59, 47, 47, 0.85)), url('IMAGENES/imagen 02.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 4rem;
+    color: #FDFBF7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #EADDCA;
+}
+
+.info-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.perks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.perk-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.perk-item i {
+    color: #A67B5B;
+    font-size: 1.5rem;
+}
+
+.reservas-form-panel {
+    flex: 1 1 500px;
+    padding: 4rem 5rem;
+    background: #FFFFFF;
+}
+
+.form-panel-title {
+    color: #3B2F2F;
+    font-size: 2.8rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 0.5rem;
+}
+
+.form-panel-subtitle {
+    color: #5C4A4A;
+    margin-bottom: 3rem;
+}
+
+.btn-large {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+/* =============================================
+   MODAL DE RESERVAS (Deprecated but kept just in case)
+   ============================================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #FDFBF7;
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.4s ease;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    border: 1px solid #EADDCA;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    color: #5C4A4A;
+    font-size: 2.5rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #A67B5B;
+}
+
+.modal-title {
+    color: #3B2F2F;
+    font-size: 2.2rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 0.5rem;
+}
+
+.modal-subtitle {
+    color: #5C4A4A;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.reserva-form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    color: #3B2F2F;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.reserva-form label i {
+    color: #A67B5B;
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.reserva-form input,
+.reserva-form select,
+.reserva-form textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 1.5px solid #EADDCA;
+    border-radius: 12px;
+    background: #FAFAFA;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #3B2F2F;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.reserva-form input::placeholder,
+.reserva-form textarea::placeholder {
+    color: #B8A78B;
+    font-weight: 400;
+}
+
+.reserva-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A67B5B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2em;
+    cursor: pointer;
+}
+
+.reserva-form input:focus,
+.reserva-form select:focus,
+.reserva-form textarea:focus {
+    border-color: #A67B5B;
+    background: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(166, 123, 91, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn-submit {
+    width: 100%;
+    background: #A67B5B;
+    color: #FDFBF7;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background: #3B2F2F;
+}
+
+.reserva-success {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.reserva-success i {
+    font-size: 4rem;
+    color: #A67B5B;
+    margin-bottom: 1rem;
+}
+
+.reserva-success h3 {
+    color: #3B2F2F;
+    font-size: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 1rem;
+}
+
+.reserva-success p {
+    color: #5C4A4A;
+    margin-bottom: 2rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+    background: #1C1616;
+    padding: 5rem 0 2rem;
+    border-top: none;
+    color: #FDFBF7;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.footer-brand .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #FDFBF7;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.footer-brand .footer-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #B8A78B;
+    max-width: 350px;
+}
+
+.footer-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: #EADDCA;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.footer-info p {
+    font-size: 0.95rem;
+    color: #B8A78B;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-info i {
+    color: #A67B5B;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(234, 221, 202, 0.1);
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: #B8A78B;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-socials a {
+    color: #1C1616;
+    background: #A67B5B;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.footer-socials a:hover {
+    background: #FDFBF7;
+    color: #1C1616;
+    transform: translateY(-3px);
+}
+
+/* =============================================
+   ANIMACIONES
+   ============================================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 768px) {
+
+    /* Header responsive */
+    .header-inner {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Navegación responsive */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .about-video-single::before {
+        display: none;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .gallery-item img {
+        height: 250px;
+    }
+
+    /* Botón menú móvil */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hero responsive */
+    .hero h1 {
+        font-size: 2.9rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.3rem;
+    }
+
+    /* Secciones responsive */
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    /* About responsive */
+    .about-grid {
+        gap: 2rem;
+    }
+
+    /* Horarios responsive */
+    .horarios-card {
+        padding: 1.5rem;
+    }
+
+    .horario-item {
+        font-size: 1.1rem;
+    }
+
+    /* Footer responsive */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+    }
+    .footer-brand .footer-description {
+        margin: 0 auto;
+    }
+    .footer-info p {
+        justify-content: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}

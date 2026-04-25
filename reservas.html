@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Reserva tu Mesa | Café Sur</title>
+
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Vinculación al archivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="reservas-page">
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <div class="container header-inner">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="IMAGENES/logo_cafesur.jpg" alt="Logo Café Sur" class="logo-img">
+                    <div class="logo-text">
+                        CAFÉ SUR
+                        <span>Especialidad Peruana</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Menú de navegación -->
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#quienes">Quiénes Somos</a>
+                <a href="index.html#horarios">Horarios</a>
+                <a href="#">Carta</a>
+                <a href="reservas.html" class="nav-btn-reservar active">Reservas</a>
+                <a href="#">Contacto</a>
+            </nav>
+
+            <!-- Botón menú móvil -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ==================== CONTENIDO DE RESERVAS ==================== -->
+    <section class="reservas-hero">
+        <div class="container">
+            <div class="reservas-split">
+                
+                <!-- Lado Izquierdo: Información visual -->
+                <div class="reservas-info-panel">
+                    <div class="info-content">
+                        <h2>Tu experiencia,<br>nuestra prioridad.</h2>
+                        <p>Asegura tu lugar para disfrutar de un ambiente diseñado para desconectar. Ya sea una reunión de negocios, una cita romántica en nuestro Wine Time o un relajante Tea Time, en Café Sur todo está listo para ti.</p>
+                        
+                        <div class="perks-list">
+                            <div class="perk-item">
+                                <i class="fas fa-coffee"></i>
+                                <span>Atención personalizada</span>
+                            </div>
+                            <div class="perk-item">
+                                <i class="fas fa-couch"></i>
+                                <span>Ambientes acogedores y lectura</span>
+                            </div>
+                            <div class="perk-item">
+                                <i class="fas fa-glass-cheers"></i>
+                                <span>Reservas exclusivas Wine & Tea Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lado Derecho: Formulario Detallado -->
+                <div class="reservas-form-panel">
+                    <h2 class="form-panel-title">Completa tu Reserva</h2>
+                    <p class="form-panel-subtitle">Nos pondremos en contacto vía WhatsApp para confirmar tu asistencia.</p>
+                    
+                    <form id="reservaPageForm" class="reserva-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+                                <input type="text" id="nombre" required placeholder="Ej. María Pérez">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono"><i class="fab fa-whatsapp"></i> WhatsApp</label>
+                                <input type="tel" id="telefono" required placeholder="+51 999 888 777">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fecha"><i class="far fa-calendar-alt"></i> Fecha de reserva</label>
+                                <input type="date" id="fecha" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="hora"><i class="far fa-clock"></i> Hora de llegada</label>
+                                <input type="time" id="hora" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="personas"><i class="fas fa-users"></i> Cantidad de personas</label>
+                                <select id="personas" required>
+                                    <option value="" disabled selected>Selecciona cantidad</option>
+                                    <option value="1">1 Persona</option>
+                                    <option value="2">2 Personas</option>
+                                    <option value="3">3 Personas</option>
+                                    <option value="4">4 Personas</option>
+                                    <option value="5">5 Personas</option>
+                                    <option value="6+">6 a más (Grupo grande)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="motivo"><i class="fas fa-star"></i> Motivo de reserva</label>
+                                <select id="motivo" required>
+                                    <option value="Estandar">Visita estándar</option>
+                                    <option value="Tea Time">Tea Time</option>
+                                    <option value="Wine Time">Wine Time</option>
+                                    <option value="Cumpleanos">Cumpleaños</option>
+                                    <option value="Reunion">Reunión de trabajo / Estudio</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje"><i class="fas fa-comment-alt"></i> Requerimientos especiales</label>
+                            <textarea id="mensaje" rows="3" placeholder="Restricciones alimentarias, silla para bebés, ubicación preferida..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit btn-large">Enviar Solicitud de Reserva</button>
+                    </form>
+
+                    <div id="reservaPageSuccess" class="reserva-success hidden">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>¡Solicitud Recibida!</h3>
+                        <p>Hemos registrado tu reserva exitosamente. Nos contactaremos contigo por WhatsApp para confirmarla a la brevedad. ¡Gracias por preferir Café Sur!</p>
+                        <a href="index.html" class="btn-submit" style="display:inline-block; text-align:center; text-decoration:none;">Volver al Inicio</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Columna 1: Marca -->
+                <div class="footer-brand">
+                    <h2 class="footer-logo">
+                        CAFÉ SUR
+                    </h2>
+                    <p class="footer-description">
+                        Especialidad Peruana. Un refugio donde el buen café, la literatura y los detalles se encuentran.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Ubicación y Contacto -->
+                <div class="footer-info">
+                    <h3>Visítanos</h3>
+                    <p><i class="fas fa-map-pin"></i> Av. Pardo y Aliaga 683, San Isidro</p>
+                    <p><i class="fab fa-whatsapp"></i> +51 904 322 426</p>
+                    <p><i class="far fa-envelope"></i> hola@cafesur.pe</p>
+                </div>
+
+                <!-- Columna 3: Horarios -->
+                <div class="footer-info">
+                    <h3>Horarios</h3>
+                    <p>Lunes a Viernes: 08:00 - 22:00</p>
+                    <p>Sábados: 09:00 - 22:00</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Café Sur. Todos los derechos reservados.
+                </p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vinculación al archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
