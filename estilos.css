@@ -936,14 +936,38 @@ footer {
     .about-grid {
         gap: 2rem;
     }
-
-    /* Horarios responsive */
-    .horarios-card {
-        padding: 1.5rem;
+    
+    .about-text p:first-of-type {
+        font-size: 1.3rem;
     }
 
-    .horario-item {
-        font-size: 1.1rem;
+    /* Horarios responsive */
+    .horarios-info {
+        padding: 3rem 1.5rem;
+    }
+    .horarios-list {
+        padding: 3rem 1.5rem;
+    }
+    .horarios-info h3 {
+        font-size: 2.3rem;
+    }
+
+    /* Reservas responsive */
+    .reservas-split {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .reservas-info-panel {
+        padding: 4rem 1.5rem;
+    }
+    
+    .reservas-form-panel {
+        padding: 3rem 1.5rem;
     }
 
     /* Footer responsive */
@@ -961,5 +985,20 @@ footer {
     .footer-bottom {
         flex-direction: column;
         gap: 1.5rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.1rem;
     }
 }

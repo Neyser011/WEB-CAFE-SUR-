@@ -137,10 +137,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (formReservaPage) {
         formReservaPage.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // 1. Recopilar datos del formulario
             const nombre = document.getElementById('nombre').value;
             const telefono = document.getElementById('telefono').value;
+            const email = document.getElementById('email').value;
             const fecha = document.getElementById('fecha').value;
             const hora = document.getElementById('hora').value;
             const personas = document.getElementById('personas').value;
@@ -148,21 +149,24 @@ document.addEventListener('DOMContentLoaded', function () {
             const mensaje = document.getElementById('mensaje').value;
 
             // 2. Número de WhatsApp de Café Sur (Código Perú 51 + número)
-            const numeroCafeSur = "51904322426"; 
+            const numeroCafeSur = "51904322426";
 
             // 3. Formatear el mensaje
             let textoWhatsApp = `☕ *NUEVA SOLICITUD DE RESERVA - CAFÉ SUR* ☕%0A%0A`;
             textoWhatsApp += `*👤 Nombre:* ${nombre}%0A`;
             textoWhatsApp += `*📱 Teléfono:* ${telefono}%0A`;
+            if (email.trim() !== "") {
+                textoWhatsApp += `*✉️ Correo:* ${email}%0A`;
+            }
             textoWhatsApp += `*📅 Fecha:* ${fecha}%0A`;
             textoWhatsApp += `*⏰ Hora:* ${hora}%0A`;
             textoWhatsApp += `*👥 Personas:* ${personas}%0A`;
             textoWhatsApp += `*🎉 Motivo:* ${motivo}%0A`;
-            
+
             if (mensaje.trim() !== "") {
                 textoWhatsApp += `*💬 Petición Especial:* ${mensaje}%0A`;
             }
-            
+
             textoWhatsApp += `%0A_Por favor, confírmenme la disponibilidad. ¡Gracias!_`;
 
             // 4. Crear URL de WhatsApp
@@ -174,14 +178,14 @@ document.addEventListener('DOMContentLoaded', function () {
             btnSubmit.disabled = true;
             btnSubmit.style.background = "#25D366"; // Color oficial de WhatsApp
 
-            setTimeout(function() {
+            setTimeout(function () {
                 // Abrir WhatsApp en nueva pestaña
                 window.open(urlWhatsApp, '_blank');
-                
+
                 // Ocultar formulario y mostrar éxito en la web
                 formReservaPage.classList.add('hidden');
                 divSuccessPage.classList.remove('hidden');
-            }, 1500); 
+            }, 1500);
         });
     }
 
@@ -200,7 +204,7 @@ class TxtRotate {
         this.tick();
         this.isDeleting = false;
     }
-    
+
     tick() {
         const i = this.loopNum % this.toRotate.length;
         const fullTxt = this.toRotate[i];
