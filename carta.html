@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Nuestra Carta | Café Sur</title>
+
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Vinculación al archivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <div class="container header-inner">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="IMAGENES/logo_cafesur.jpg" alt="Logo Café Sur" class="logo-img">
+                    <div class="logo-text">
+                        CAFÉ SUR
+                        <span>Especialidad Peruana</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Menú de navegación -->
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#quienes">Quiénes Somos</a>
+                <a href="index.html#horarios">Horarios</a>
+                <a href="carta.html" style="color: #A67B5B;">Carta</a>
+                <a href="reservas.html" target="_blank" class="nav-btn-reservar">Reservas</a>
+            </nav>
+
+            <!-- Botón menú móvil -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ==================== COMING SOON SECTION ==================== -->
+    <section class="hero" style="min-height: 85vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(rgba(28, 22, 22, 0.75), rgba(28, 22, 22, 0.9)), url('IMAGENES/imagen 02.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-content" style="text-align: center;">
+            <i class="fas fa-utensils" style="font-size: 3.5rem; color: #A67B5B; margin-bottom: 1.5rem;"></i>
+            <h1 style="font-size: 4rem; margin-bottom: 1rem;">NUESTRA CARTA</h1>
+            <p class="subtitle" style="font-size: 1.5rem; color: #EADDCA; margin-bottom: 2.5rem; letter-spacing: 2px;">
+                Estamos cocinando algo especial. <br>
+                <span style="color: #A67B5B; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 2rem; display: inline-block; margin-top: 1rem;">¡Próximamente disponible!</span>
+            </p>
+            <a href="index.html" class="btn-reservar" style="text-decoration: none;">
+                <i class="fas fa-arrow-left"></i> Volver al Inicio
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Columna 1: Marca -->
+                <div class="footer-brand">
+                    <h2 class="footer-logo">CAFÉ SUR</h2>
+                    <p class="footer-description">
+                        Especialidad Peruana. Un refugio donde el buen café, la literatura y los detalles se encuentran.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Ubicación y Contacto -->
+                <div class="footer-info">
+                    <h3>Visítanos</h3>
+                    <p><i class="fas fa-map-pin"></i> Av. Pardo y Aliaga 683, San Isidro</p>
+                    <p><i class="fab fa-whatsapp"></i> +51 904 322 426</p>
+                    <p><i class="far fa-envelope"></i> hola@cafesur.pe</p>
+                </div>
+
+                <!-- Columna 3: Horarios -->
+                <div class="footer-info">
+                    <h3>Horarios</h3>
+                    <p>Lunes a Viernes: 08:00 - 22:00</p>
+                    <p>Sábados: 09:00 - 22:00</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Café Sur. Todos los derechos reservados.
+                </p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vinculación al archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
