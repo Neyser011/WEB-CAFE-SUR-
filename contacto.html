@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Contacto | Café Sur</title>
+
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Vinculación al archivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="reservas-page">
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <div class="container header-inner">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="IMAGENES/logo_cafesur.jpg" alt="Logo Café Sur" class="logo-img">
+                    <div class="logo-text">
+                        CAFÉ SUR
+                        <span>Especialidad Peruana</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Menú de navegación -->
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#quienes">Quiénes Somos</a>
+                <a href="index.html#horarios">Horarios</a>
+                <a href="carta.html">Carta</a>
+                <a href="contacto.html" class="active" style="color: #A67B5B;">Contacto</a>
+            </nav>
+
+            <!-- Botón menú móvil -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ==================== CONTENIDO DE CONTACTO ==================== -->
+    <section class="reservas-hero" style="padding-top: 140px; padding-bottom: 80px; background-color: #FDFBF7;">
+        <div class="container">
+            
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title">HABLEMOS</h2>
+                <p style="color: #5C4A4A; font-size: 1.15rem; max-width: 600px; margin: 0 auto; line-height: 1.8;">
+                    Ya sea para organizar un evento privado, consultas sobre nuestra librería, o simplemente saludarnos. Estamos aquí para escucharte.
+                </p>
+            </div>
+
+            <div class="reservas-split" style="min-height: auto; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border-radius: 24px; overflow: hidden; background: #FFFFFF;">
+                
+                <!-- Lado Izquierdo: Información Directa y Mapa -->
+                <div class="reservas-info-panel" style="background: linear-gradient(rgba(28, 22, 22, 0.85), rgba(28, 22, 22, 0.95)), url('IMAGENES/imagen 03.jpg'); background-size: cover; border-right: none;">
+                    <div class="info-content" style="color: #FDFBF7;">
+                        <h2 style="color: #FDFBF7; font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 2rem; line-height: 1.2;">Nuestras Puertas<br>están Abiertas.</h2>
+                        
+                        <div class="perks-list" style="margin-bottom: 3rem;">
+                            <div class="perk-item" style="color: #EADDCA;">
+                                <i class="fas fa-map-marker-alt" style="color: #A67B5B; font-size: 1.5rem;"></i>
+                                <div>
+                                    <span style="display: block; color: #FFFFFF; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem;">Visítanos</span>
+                                    <span style="font-size: 0.95rem;">Av. Pardo y Aliaga 683, San Isidro, Lima</span>
+                                </div>
+                            </div>
+                            <div class="perk-item" style="color: #EADDCA; margin-top: 1.5rem;">
+                                <i class="fab fa-whatsapp" style="color: #A67B5B; font-size: 1.5rem;"></i>
+                                <div>
+                                    <span style="display: block; color: #FFFFFF; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem;">WhatsApp Directo</span>
+                                    <span style="font-size: 0.95rem;">+51 904 322 426</span>
+                                </div>
+                            </div>
+                            <div class="perk-item" style="color: #EADDCA; margin-top: 1.5rem;">
+                                <i class="far fa-envelope" style="color: #A67B5B; font-size: 1.5rem;"></i>
+                                <div>
+                                    <span style="display: block; color: #FFFFFF; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem;">Correo Electrónico</span>
+                                    <span style="font-size: 0.95rem;">hola@cafesur.pe</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Espacio para Mapa (Placeholder) -->
+                        <div style="width: 100%; height: 200px; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 1px dashed rgba(166, 123, 91, 0.4);">
+                            <span style="color: #EADDCA; font-size: 0.9rem; text-align: center; padding: 1rem;"><i class="fas fa-map-marked-alt" style="font-size: 1.5rem; display: block; margin-bottom: 0.8rem; color: #A67B5B;"></i>[Aquí podrás integrar tu mapa de Google Maps interactivo próximamente]</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lado Derecho: Formulario de Contacto General -->
+                <div class="reservas-form-panel">
+                    <h2 class="form-panel-title">Envíanos un Mensaje</h2>
+                    <p class="form-panel-subtitle">Para consultas generales, catering, alianzas o eventos.</p>
+                    
+                    <form class="reserva-form" onsubmit="event.preventDefault(); alert('Este formulario es una plantilla visual. Podrá ser conectado a un correo electrónico más adelante.');">
+                        <div class="form-group">
+                            <label for="contacto-nombre"><i class="fas fa-user"></i> Nombre completo</label>
+                            <input type="text" id="contacto-nombre" required placeholder="Tu nombre">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contacto-email"><i class="fas fa-envelope"></i> Correo electrónico</label>
+                                <input type="email" id="contacto-email" required placeholder="correo@ejemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contacto-asunto"><i class="fas fa-tag"></i> Asunto</label>
+                                <select id="contacto-asunto" required>
+                                    <option value="" disabled selected>Selecciona un motivo</option>
+                                    <option value="Duda">Consulta General</option>
+                                    <option value="Eventos">Eventos Privados / Catering</option>
+                                    <option value="Libreria">Consultas sobre la Librería</option>
+                                    <option value="Alianzas">Alianzas Comerciales</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contacto-mensaje"><i class="fas fa-comment-alt"></i> Tu mensaje</label>
+                            <textarea id="contacto-mensaje" rows="6" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit btn-large">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Columna 1: Marca -->
+                <div class="footer-brand">
+                    <h2 class="footer-logo">CAFÉ SUR</h2>
+                    <p class="footer-description">
+                        Especialidad Peruana. Un refugio donde el buen café, la literatura y los detalles se encuentran.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Ubicación y Contacto -->
+                <div class="footer-info">
+                    <h3>Visítanos</h3>
+                    <p><i class="fas fa-map-pin"></i> Av. Pardo y Aliaga 683, San Isidro</p>
+                    <p><i class="fab fa-whatsapp"></i> +51 904 322 426</p>
+                    <p><i class="far fa-envelope"></i> hola@cafesur.pe</p>
+                </div>
+
+                <!-- Columna 3: Horarios -->
+                <div class="footer-info">
+                    <h3>Horarios</h3>
+                    <p>Lunes a Viernes: 08:00 - 22:00</p>
+                    <p>Sábados: 09:00 - 22:00</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Café Sur. Todos los derechos reservados.
+                </p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vinculación al archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
