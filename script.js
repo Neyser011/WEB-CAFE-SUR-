@@ -110,13 +110,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Elementos a observar
-    const animElements = document.querySelectorAll('.about-text, .about-images, .horarios-card');
+    const animElements = document.querySelectorAll('.about-text, .about-video-single, .horarios-modern, .esp-card, .gallery-item');
 
-    animElements.forEach(function (element) {
+    animElements.forEach(function (element, index) {
         // Estado inicial
         element.style.opacity = '0';
         element.style.transform = 'translateY(30px)';
-        element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        // Añadir pequeño delay basado en el índice para efecto cascada en grid
+        let delay = 0;
+        if(element.classList.contains('esp-card') || element.classList.contains('gallery-item')) {
+            delay = (index % 4) * 0.15;
+        }
+        element.style.transition = `opacity 0.8s ease ${delay}s, transform 0.8s ease ${delay}s`;
 
         // Observar elemento
         observer.observe(element);
@@ -243,4 +248,11 @@ document.addEventListener('DOMContentLoaded', function () {
             new TxtRotate(elements[i], JSON.parse(toRotate), period);
         }
     }
+});
+
+// =============================================
+// PROTECCIÓN CONTRA PLAGIO (Desactivar clic derecho)
+// =============================================
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
 });
